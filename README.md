@@ -39,6 +39,11 @@ You can now add your favorable icons in your files in this tag format.
 ```
 <i className="fa-solid fa-map-location-dot"></i>
 ```
+### Error Encounter
+```
+npm cache clean --force
+npm install
+```
 ## Tailwind
 [Installation Doc](https://tailwindcss.com/docs/guides/vite)
 

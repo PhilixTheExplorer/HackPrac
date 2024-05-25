@@ -93,7 +93,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
 );
 
 ```
-### Outlet
+#### Outlet
 - Purpose: <Outlet /> is used to render nested route components within a parent component.
 - Usage: Place <Outlet /> in the parent route's component where you want the child route components to be rendered.
 - Effect: When a child route is matched, its component replaces the <Outlet /> in the parent component.
@@ -153,7 +153,7 @@ const location = useLocation();
 //location.pathname === "/" ? "#2F69D9" : "#eeeeee",
 
 ```
-### Other Essentials
+## Other Essentials
 ```
 npm install react-responsive-carousel
 npm install react-scroll react-icons

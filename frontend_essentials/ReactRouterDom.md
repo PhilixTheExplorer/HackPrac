@@ -2,7 +2,7 @@
 ```
 npm install react-router-dom
 ```
-In `main.jsx`
+In `./src/main.jsx`
 ```
 import React from 'react'
 import ReactDOM from 'react-dom/client'

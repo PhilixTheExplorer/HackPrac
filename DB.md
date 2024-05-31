@@ -1,4 +1,6 @@
 ```
+CREATE DATABASE note_taking_app;
+-- Create the users table
 CREATE TABLE users (
     id INT AUTO_INCREMENT PRIMARY KEY,
     firstname VARCHAR(255) NOT NULL,
@@ -9,6 +11,30 @@ CREATE TABLE users (
     password VARCHAR(255) NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+
+-- Create the notes table with a foreign key referencing the users table
+CREATE TABLE notes (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
+    content TEXT NOT NULL,
+    tag VARCHAR(100),
+    userid INT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (userid) REFERENCES users(id)
+);
+-- Insert dummy data into notes table
+INSERT INTO notes (title, content, tag, userid)
+VALUES 
+('Note 1', 'Content for note 1', 'tag1', 1),
+('Note 2', 'Content for note 2', 'tag2', 2),
+('Note 3', 'Content for note 3', 'tag3', 3),
+('Note 4', 'Content for note 4', 'tag1', 4),
+('Note 5', 'Content for note 5', 'tag2', 5),
+('Note 6', 'Content for note 6', 'tag3', 6),
+('Note 7', 'Content for note 7', 'tag1', 7),
+('Note 8', 'Content for note 8', 'tag2', 8),
+('Note 9', 'Content for note 9', 'tag3', 9),
+('Note 10', 'Content for note 10', 'tag1', 10);
 INSERT INTO users (firstname, lastname, username, university, email, password) VALUES
 ('John', 'Doe', 'johndoe', 'University of Example', 'john.doe@example.edu', 'password123'),
 ('Jane', 'Smith', 'janesmith', 'Example State University', 'jane.smith@example.edu', 'password123'),
